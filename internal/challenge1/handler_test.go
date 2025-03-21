@@ -1,9 +1,9 @@
 package challenge1
 
 import (
-    "testing"
+	"testing"
 )
 
 func TestEchoHandler(t *testing.T) {
-	
+
 }

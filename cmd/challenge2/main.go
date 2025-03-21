@@ -8,5 +8,10 @@ import (
 )
 
 func main() {
+	n := maelstrom.NewNode()
+	handler := challenge2.NewHandler(n)
 
+	if err := handler.Start(); err != nil {
+		log.Println(err)
+	}
 }

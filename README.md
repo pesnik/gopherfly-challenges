@@ -23,30 +23,53 @@ A collection of solutions to the [Fly.io Distributed Systems Challenges](https:/
 
 The repository is organized into modules to enhance readability and maintainability:
 
-```plaintext
-gopherfly-challenges/
-├── cmd/
-│   ├── challenge1/
-│   │   └── main.go         # Entry point for Challenge 1: Echo Service
-│   ├── challenge2/
-│   │   └── main.go         # Entry point for Challenge 2: Unique ID Generator
-│   └── ...                 # Additional challenge entry points
-├── internal/
-│   ├── challenge1/
-│   │   ├── handler.go      # Business logic for Challenge 1
-│   │   └── ...             # Additional internal components for Challenge 1
-│   ├── challenge2/
-│   │   ├── handler.go      # Business logic for Challenge 2
-│   │   └── ...             # Additional internal components for Challenge 2
-│   └── ...                 # Other internal packages
-├── pkg/
-│   ├── utils/
-│   │   └── utils.go        # Shared utility functions and packages
-│   └── ...                 # Additional shared packages
-├── go.mod                  # Go module file
-├── go.sum                  # Go dependency checksums
-├── README.md               # This file
-└── LICENSE                 # License file
+```
+gopherfly-challenges/                  # Root directory of your project
+├── cmd/                              # Contains executable entry points for each challenge
+│   ├── challenge1/                   # Directory for Challenge 1: Echo Service
+│   │   ├── main.go                   # Main executable file for Challenge 1
+│   │   └── README.md                 # Brief docs: goal, approach, key learnings, links to detailed docs
+│   ├── challenge2/                   # Directory for Challenge 2: Unique ID Generator
+│   │   ├── main.go                   # Main executable file for Challenge 2
+│   │   └── README.md                 # Brief docs specific to Challenge 2
+│   └── challengeN/                   # Placeholder for future challenges
+│       ├── main.go                   # Main file for additional challenges
+│       └── README.md                 # Per-challenge documentation
+├── internal/                         # Internal packages specific to your project
+│   ├── challenge1/                   # Logic specific to Challenge 1
+│   │   ├── handler.go                # Business logic (e.g., echo service implementation)
+│   │   └── types.go                  # Custom types or structs for Challenge 1
+│   ├── challenge2/                   # Logic specific to Challenge 2
+│   │   ├── handler.go                # Business logic (e.g., unique ID generation)
+│   │   └── types.go                  # Custom types or structs for Challenge 2
+│   └── common/                       # Shared internal utilities (if needed)
+│       └── logger.go                 # Example: internal logging utility
+├── pkg/                              # Reusable packages across challenges
+│   ├── utils/                        # General-purpose utilities
+│   │   ├── utils.go                  # Shared functions (e.g., string parsing, error handling)
+│   │   └── network.go                # Network-related helpers (e.g., connection utilities)
+│   └── middleware/                   # Example: reusable middleware (if applicable)
+│       └── retry.go                  # Retry logic for network calls
+├── docs/                             # Dedicated folder for comprehensive documentation
+│   ├── README.md                     # Project-wide overview, index linking to all challenges
+│   ├── challenge1/                   # Detailed docs for Challenge 1
+│   │   ├── detailed_writeup.md       # In-depth explanation of solution and thought process
+│   │   ├── echo_flow.png             # Doodle/diagram of message flow in echo service
+│   │   └── resources.md              # List of resources used (e.g., tutorials, articles)
+│   ├── challenge2/                   # Detailed docs for Challenge 2
+│   │   ├── detailed_writeup.md       # Deep dive into unique ID generation
+│   │   ├── id_system.jpg             # Diagram of ID generation process
+│   │   └── resources.md              # Specific resources for Challenge 2
+│   └── challengeN/                   # Placeholder for future challenge docs
+│       ├── detailed_writeup.md       # Detailed notes for additional challenges
+│       └── diagram.png               # Visual aids for future challenges
+├── tests/                            # Optional: directory for integration or end-to-end tests
+│   ├── challenge1_test.go            # Tests specific to Challenge 1
+│   └── challenge2_test.go            # Tests specific to Challenge 2
+├── go.mod                            # Go module file defining dependencies
+├── go.sum                            # Checksums for dependency integrity
+├── README.md                         # Top-level project README (overview, setup instructions)
+└── LICENSE                           # MIT License file for your project
 ```
 
 ## Challenges

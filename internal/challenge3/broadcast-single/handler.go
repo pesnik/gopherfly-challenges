@@ -1,4 +1,4 @@
-package challenge3
+package singleBroadcast
 
 import (
 	"encoding/json"
